@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+
+<html>
+<!-- Abel Berhane -->
+<head>
+<title></title>
+
+<!-- JQuery -->
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+<!--Load the AJAX api -->
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+ 
+ <!-- Google Maps api -->
+<script type="text/javascript" src="https://maps.google.com/maps/api/js?key=API Key&sensor=false">
+</script>
+
+<!-- Source Code -->
+<script type="text/javascript" src="srcCode.js">
+</script>
+
+<!--Style sheet -->
+<style>
+#title_header {
+
+  text-align: center;
+
+}
+
+#history {
+  width: 250px;
+  height: 100px;
+  overflow-y: auto;
+}
+
+
+</style>
+</head>
+
+<body>
+
+<!--Title-->
+<h1 id="title_header">Weather Application</h1>
+
+<!--Instructions to enter address-->
+<p><b>Please type your address or your city
+ and state and then press enter: </b></p> 
+<textarea id="address"> </textarea>
+
+<!--Enter button-->
+<button type="button" onclick="findAddress()">Enter</button>
+<br>
+
+<p><b>If you have searched this page before, 
+you can click on one of the addresses from your search history to redo that search</b></p>
+<!-- Toggle to see the search history-->
+<p id="toggle">Click here to show/hide search history</p>
+
+<!--Container holding nested div tags for each search history-->
+<div id="history">
+<a ></a>
+</div>
+
+
+<!--Current Day Header -->
+<h1 id="current_title"></h1>
+
+<!--More information about today's weather -->
+<p id="current_summary"> </p>
+
+<br>
+
+<!--Title for the 7 day forecast -->
+<h1 id="week_forcast"> </h1>
+
+<!--Summary for this week's weather -->
+<p id="week_summary"></p>
+
+<!--Week Chart-->
+<p id="week_chart"> </p>
+
+<br>
+
+<!--Title for the 12 hour forecast -->
+<h1 id="day_forcast"></h1>
+
+<!--Summary for today's weather -->
+<p id="day_summary"></p>
+
+<!--Day Chart-->
+<p id="day_chart"></p>
+
+</body>
+</html>
